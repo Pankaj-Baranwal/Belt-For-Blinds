@@ -463,7 +463,11 @@ int drawable twitter_70x70 0x7f020056
 int drawable website_75x75 0x7f020057
 int id abt 0x7f0c005f
 int id abt_txt 0x7f0c0050
+<<<<<<< HEAD
 int id action0 0x7f0c0065
+=======
+int id action0 0x7f0c0060
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id action_bar 0x7f0c0041
 int id action_bar_activity_content 0x7f0c0000
 int id action_bar_container 0x7f0c0040
@@ -472,22 +476,36 @@ int id action_bar_spinner 0x7f0c0001
 int id action_bar_subtitle 0x7f0c0022
 int id action_bar_title 0x7f0c0021
 int id action_context_bar 0x7f0c0042
+<<<<<<< HEAD
 int id action_divider 0x7f0c0069
+=======
+int id action_divider 0x7f0c0064
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id action_menu_divider 0x7f0c0002
 int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003e
 int id action_mode_bar_stub 0x7f0c003d
 int id action_mode_close_button 0x7f0c0023
+<<<<<<< HEAD
 int id action_settings 0x7f0c0074
+=======
+int id action_settings 0x7f0c006f
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id activity_chooser_view_content 0x7f0c0024
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c001c
 int id beginning 0x7f0c0019
 int id button 0x7f0c0058
 int id buttonPanel 0x7f0c002b
+<<<<<<< HEAD
 int id cancel_action 0x7f0c0066
 int id checkbox 0x7f0c0039
 int id chronometer 0x7f0c006c
+=======
+int id cancel_action 0x7f0c0061
+int id checkbox 0x7f0c0039
+int id chronometer 0x7f0c0067
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id collapseActionView 0x7f0c001d
 int id contentPanel 0x7f0c0031
 int id custom 0x7f0c0037
@@ -499,7 +517,11 @@ int id disableHome 0x7f0c000c
 int id discnt 0x7f0c005e
 int id edit_query 0x7f0c0043
 int id end 0x7f0c001a
+<<<<<<< HEAD
 int id end_padder 0x7f0c0071
+=======
+int id end_padder 0x7f0c006c
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id expand_activities_button 0x7f0c0025
 int id expanded_menu 0x7f0c0038
 int id facebook 0x7f0c0053
@@ -509,6 +531,7 @@ int id icon 0x7f0c0029
 int id ifRoom 0x7f0c001e
 int id image 0x7f0c0026
 int id imageView 0x7f0c005a
+<<<<<<< HEAD
 int id imageView2 0x7f0c0072
 int id info 0x7f0c0070
 int id instagram 0x7f0c0055
@@ -518,6 +541,17 @@ int id listMode 0x7f0c0009
 int id listView 0x7f0c0059
 int id list_item 0x7f0c0028
 int id media_actions 0x7f0c0068
+=======
+int id imageView2 0x7f0c006d
+int id info 0x7f0c006b
+int id instagram 0x7f0c0055
+int id line1 0x7f0c0065
+int id line3 0x7f0c0069
+int id listMode 0x7f0c0009
+int id listView 0x7f0c0059
+int id list_item 0x7f0c0028
+int id media_actions 0x7f0c0063
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id middle 0x7f0c001b
 int id multiply 0x7f0c0014
 int id never 0x7f0c001f
@@ -529,7 +563,10 @@ int id parentPanel 0x7f0c002d
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
 int id radio 0x7f0c003b
+<<<<<<< HEAD
 int id restart 0x7f0c0063
+=======
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id screen 0x7f0c0015
 int id scrollIndicatorDown 0x7f0c0035
 int id scrollIndicatorUp 0x7f0c0032
@@ -544,7 +581,10 @@ int id search_mag_icon 0x7f0c0048
 int id search_plate 0x7f0c0049
 int id search_src_text 0x7f0c004a
 int id search_voice_btn 0x7f0c004e
+<<<<<<< HEAD
 int id seekBar 0x7f0c0062
+=======
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id select_dialog_listview 0x7f0c004f
 int id shortcut 0x7f0c003a
 int id showCustom 0x7f0c000f
@@ -555,6 +595,7 @@ int id split_action_bar 0x7f0c0007
 int id src_atop 0x7f0c0016
 int id src_in 0x7f0c0017
 int id src_over 0x7f0c0018
+<<<<<<< HEAD
 int id status_bar_latest_event_content 0x7f0c0067
 int id submit_area 0x7f0c004c
 int id tabMode 0x7f0c000b
@@ -568,13 +609,29 @@ int id textView2 0x7f0c005b
 int id textView3 0x7f0c0073
 int id textView4 0x7f0c0052
 int id time 0x7f0c006b
+=======
+int id status_bar_latest_event_content 0x7f0c0062
+int id submit_area 0x7f0c004c
+int id tabMode 0x7f0c000b
+int id text 0x7f0c006a
+int id text2 0x7f0c0068
+int id textSpacerNoButtons 0x7f0c0034
+int id textView 0x7f0c0057
+int id textView2 0x7f0c005b
+int id textView3 0x7f0c006e
+int id textView4 0x7f0c0052
+int id time 0x7f0c0066
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id title 0x7f0c002a
 int id title_template 0x7f0c002f
 int id topPanel 0x7f0c002e
 int id twitter 0x7f0c0054
 int id up 0x7f0c0008
 int id useLogo 0x7f0c0012
+<<<<<<< HEAD
 int id view 0x7f0c0060
+=======
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int id website 0x7f0c0056
 int id withText 0x7f0c0020
 int id wrap_content 0x7f0c0013
@@ -611,6 +668,7 @@ int layout abc_select_dialog_material 0x7f040018
 int layout activity_about 0x7f040019
 int layout activity_device_list 0x7f04001a
 int layout activity_led_control 0x7f04001b
+<<<<<<< HEAD
 int layout activity_main 0x7f04001c
 int layout notification_media_action 0x7f04001d
 int layout notification_media_cancel_action 0x7f04001e
@@ -625,6 +683,21 @@ int layout select_dialog_multichoice_material 0x7f040026
 int layout select_dialog_singlechoice_material 0x7f040027
 int layout splash 0x7f040028
 int layout support_simple_spinner_dropdown_item 0x7f040029
+=======
+int layout notification_media_action 0x7f04001c
+int layout notification_media_cancel_action 0x7f04001d
+int layout notification_template_big_media 0x7f04001e
+int layout notification_template_big_media_narrow 0x7f04001f
+int layout notification_template_lines 0x7f040020
+int layout notification_template_media 0x7f040021
+int layout notification_template_part_chronometer 0x7f040022
+int layout notification_template_part_time 0x7f040023
+int layout select_dialog_item_material 0x7f040024
+int layout select_dialog_multichoice_material 0x7f040025
+int layout select_dialog_singlechoice_material 0x7f040026
+int layout splash 0x7f040027
+int layout support_simple_spinner_dropdown_item 0x7f040028
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
 int menu menu_device_list 0x7f0d0000
 int menu menu_led_control 0x7f0d0001
 int mipmap ic_launcher 0x7f030000

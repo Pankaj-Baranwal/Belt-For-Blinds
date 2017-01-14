@@ -12,16 +12,26 @@
         "source": "/home/pankaj/pendulumReader/app/src/main/res/drawable/led.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_edit_text_material.xml"
+=======
+        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
     },
     {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/cover.png",
         "source": "/home/pankaj/pendulumReader/app/src/main/res/drawable/cover.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+=======
+        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable/abc_edit_text_material.xml"
+>>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
     },
     {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
