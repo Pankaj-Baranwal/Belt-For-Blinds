@@ -24,8 +24,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -33,6 +35,8 @@ import java.util.UUID;
  */
 
 public class NewActivity extends Activity {
+
+    private Date prev, current;
     private static final String TAG = "bluetooth2";
     String text = "Hello_World";
 
@@ -59,6 +63,7 @@ public class NewActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        prev = new Date();
         Intent newint = getIntent();
         address = newint.getStringExtra(DeviceList.EXTRA_ADDRESS); //receive the address of the
         setContentView(R.layout.activity_new);
@@ -87,16 +92,21 @@ public class NewActivity extends Activity {
                             String sbprint = sb.substring(0, endOfLineIndex);               // extract string
                             sb.delete(0, sb.length());                                      // and clear
                             text = "The object is " + sbprint + " centimeters away";
-                            txtArduino.setText("Data from Arduino: " + sbprint);            // update TextView
-                            btnOff.setEnabled(true);
-                            btnOn.setEnabled(true);
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                ttsGreater21(text);
-                            } else {
-                                ttsUnder20(text);
+                            String text2 = "Distance to the object in front is " + sbprint + "centimeters";
+                            Random ran = new Random();
+                            if (ran.nextInt(2)==1){
+                                text = text2;
+                            }
+                            txtArduino.setText(text);            // update TextView
+                            if ((new Date()).getTime()-prev.getTime()>5000) {
+                                prev = new Date();
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                    ttsGreater21(text);
+                                } else {
+                                    ttsUnder20(text);
+                                }
                             }
                         }
-                        //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
                         break;
                 }
             };
@@ -108,6 +118,7 @@ public class NewActivity extends Activity {
         btnOn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 btnOn.setEnabled(false);
+                btnOff.setEnabled(true);
                 mConnectedThread.write("1");    // Send "1" via Bluetooth
                 //Toast.makeText(getBaseContext(), "Turn on LED", Toast.LENGTH_SHORT).show();
             }
@@ -116,6 +127,7 @@ public class NewActivity extends Activity {
         btnOff.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 btnOff.setEnabled(false);
+                btnOn.setEnabled(true);
                 mConnectedThread.write("0");    // Send "0" via Bluetooth
                 //Toast.makeText(getBaseContext(), "Turn off LED", Toast.LENGTH_SHORT).show();
             }
