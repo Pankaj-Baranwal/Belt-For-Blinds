@@ -12,6 +12,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.1.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/home/pankaj/pendulumReader/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_638fe033db604caf593ca8bdcf5371d4ab93156a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.1.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/home/pankaj/pendulumReader/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_8752a88ad381d7281e3ee9c7a4f11a4e8d06dd5a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -36,24 +54,6 @@
         revision="21.1.2"
         sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
         <dex dex="/home/pankaj/pendulumReader/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_21065504f19da797336678137a925a9f5ce6bfa8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="21.1.2"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/home/pankaj/pendulumReader/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_638fe033db604caf593ca8bdcf5371d4ab93156a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="21.1.2"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/home/pankaj/pendulumReader/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_8752a88ad381d7281e3ee9c7a4f11a4e8d06dd5a.jar" />
     </item>
 
 </items>

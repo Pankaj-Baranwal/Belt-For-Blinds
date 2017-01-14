@@ -8,24 +8,14 @@
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-<<<<<<< HEAD
-        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
-        "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-=======
->>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-<<<<<<< HEAD
-=======
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
->>>>>>> 96a4157516d8d42edbc53473a2d76cad115d663b
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png"
     },
