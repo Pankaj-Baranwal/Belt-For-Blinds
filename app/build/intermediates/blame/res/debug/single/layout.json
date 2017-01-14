@@ -8,12 +8,12 @@
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
-        "source": "/home/pankaj/pendulumReader/app/src/main/res/layout/activity_about.xml"
-    },
-    {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/home/pankaj/pendulumReader/app/src/main/res/layout/activity_about.xml"
     },
     {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/activity_device_list.xml",
@@ -62,6 +62,10 @@
     {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/home/pankaj/pendulumReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/pankaj/pendulumReader/app/src/main/res/layout/activity_main.xml"
     },
     {
         "merged": "/home/pankaj/pendulumReader/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
