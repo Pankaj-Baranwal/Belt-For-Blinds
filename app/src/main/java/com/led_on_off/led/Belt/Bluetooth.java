@@ -25,7 +25,7 @@ import java.util.UUID;
  * connections, a thread for connecting with a device, and a thread for
  * performing data transmissions when connected.
  */
-public class Bluetooth {
+class Bluetooth {
     // Debugging
     private static final String TAG = "BluetoothService";
     private static final boolean D = true;
@@ -40,11 +40,11 @@ public class Bluetooth {
     // SECURE "fa87c0d0-afac-11de-8a39-0800200c9a66"
     // SPP "0001101-0000-1000-8000-00805F9B34FB"
 
-    public static final int MESSAGE_STATE_CHANGE = 1;
-    public static final int MESSAGE_READ = 2;
-    public static final int MESSAGE_WRITE = 3;
-    public static final int MESSAGE_DEVICE_NAME = 4;
-    public static final int MESSAGE_TOAST = 5;
+    static final int MESSAGE_STATE_CHANGE = 1;
+    static final int MESSAGE_READ = 2;
+    static final int MESSAGE_WRITE = 3;
+    static final int MESSAGE_DEVICE_NAME = 4;
+    static final int MESSAGE_TOAST = 5;
 
     // Member fields
     private final BluetoothAdapter mAdapter;
@@ -55,10 +55,10 @@ public class Bluetooth {
     private int mState;
 
     // Constants that indicate the current connection state
-    public static final int STATE_NONE = 0; // we're doing nothing
-    public static final int STATE_LISTEN = 1; // now listening for incoming connections
-    public static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
-    public static final int STATE_CONNECTED = 3; // now connected to a remote device
+    private static final int STATE_NONE = 0; // we're doing nothing
+    private static final int STATE_LISTEN = 1; // now listening for incoming connections
+    private static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
+    private static final int STATE_CONNECTED = 3; // now connected to a remote device
 
     /**
      * Constructor. Prepares a new BluetoothChat session.
@@ -68,7 +68,7 @@ public class Bluetooth {
      * @param handler
      *            A Handler to send messages back to the UI Activity
      */
-    public Bluetooth(Context context, Handler handler) {
+    Bluetooth(Context context, Handler handler) {
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         if (D) for (BluetoothDevice bd: mAdapter.getBondedDevices()) Log.d(TAG, "Bounded device "+bd);
         mState = STATE_NONE;
@@ -94,7 +94,7 @@ public class Bluetooth {
     /**
      * Return the current connection state.
      */
-    public synchronized int getState() {
+    private synchronized int getState() {
         return mState;
     }
 
@@ -102,7 +102,7 @@ public class Bluetooth {
      * Start the chat service. Specifically start AcceptThread to begin a
      * session in listening (server) mode. Called by the Activity onResume()
      */
-    public synchronized void start() {
+    synchronized void start() {
         if (D)
             Log.d(TAG, "start");
 
@@ -165,8 +165,8 @@ public class Bluetooth {
      * @param device
      *            The BluetoothDevice that has been connected
      */
-    public synchronized void connected(BluetoothSocket socket,
-                                       BluetoothDevice device, final String socketType) {
+    private synchronized void connected(BluetoothSocket socket,
+                                        BluetoothDevice device, final String socketType) {
         if (D)
             Log.d(TAG, "connected, Socket Type:" + socketType);
 
@@ -285,7 +285,7 @@ public class Bluetooth {
         private final BluetoothServerSocket mmServerSocket;
         private String mSocketType;
 
-        public AcceptThread() {
+        AcceptThread() {
             BluetoothServerSocket tmp = null;
 
             // Create a new listening server socket
@@ -347,7 +347,7 @@ public class Bluetooth {
 
         }
 
-        public void cancel() {
+        void cancel() {
             if (D)
                 Log.d(TAG, "Socket Type" + mSocketType + "cancel " + this);
             try {
@@ -369,7 +369,7 @@ public class Bluetooth {
         private final BluetoothDevice mmDevice;
         private String mSocketType;
 
-        public ConnectThread(BluetoothDevice device) {
+        ConnectThread(BluetoothDevice device) {
             mmDevice = device;
             BluetoothSocket tmp = null;
 
@@ -417,7 +417,7 @@ public class Bluetooth {
             connected(mmSocket, mmDevice, mSocketType);
         }
 
-        public void cancel() {
+        void cancel() {
             try {
                 mmSocket.close();
             } catch (IOException e) {
@@ -436,7 +436,7 @@ public class Bluetooth {
         private final InputStream mmInStream;
         private final OutputStream mmOutStream;
 
-        public ConnectedThread(BluetoothSocket socket, String socketType) {
+        ConnectedThread(BluetoothSocket socket, String socketType) {
             Log.d(TAG, "create ConnectedThread: " + socketType);
             mmSocket = socket;
             InputStream tmpIn = null;
@@ -486,7 +486,7 @@ public class Bluetooth {
          * @param buffer
          *            The bytes to write
          */
-        public void write(byte[] buffer) {
+        void write(byte[] buffer) {
             try {
                 mmOutStream.write(buffer);
 
@@ -498,7 +498,7 @@ public class Bluetooth {
             }
         }
 
-        public void cancel() {
+        void cancel() {
             try {
                 mmSocket.close();
             } catch (IOException e) {
@@ -507,7 +507,7 @@ public class Bluetooth {
         }
     }
 
-    public void sendMessage(String message) {
+    void sendMessage(String message) {
         // Check that we're actually connected before trying anything
         if (this.getState() != Bluetooth.STATE_CONNECTED) {
             Log.w(TAG, "bluetooth is not connected");
@@ -523,7 +523,7 @@ public class Bluetooth {
         }
     }
 
-    public void connectDevice(String deviceName) {
+    void connectDevice(String deviceName) {
         // Get the device MAC address
         String address = null;
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
