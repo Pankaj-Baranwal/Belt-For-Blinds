@@ -1,4 +1,4 @@
-package com.led_on_off.led.Belt;
+package com.led_on_off.led.belt;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.led_on_off.led.DeviceList;
 import com.led_on_off.led.R;
 
 import java.io.IOException;
@@ -58,7 +59,8 @@ public class NewActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Intent newint = getIntent();
+        address = newint.getStringExtra(DeviceList.EXTRA_ADDRESS); //receive the address of the
         setContentView(R.layout.activity_new);
 
         btnOn = (Button) findViewById(R.id.btnOn);                  // button LED ON

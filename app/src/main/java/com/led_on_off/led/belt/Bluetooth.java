@@ -1,4 +1,4 @@
-package com.led_on_off.led.Belt;
+package com.led_on_off.led.belt;
 
 /**
  * Created by pankaj on 14/1/17.

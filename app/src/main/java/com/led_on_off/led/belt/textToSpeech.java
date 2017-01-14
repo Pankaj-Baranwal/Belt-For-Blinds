@@ -1,4 +1,4 @@
-package com.led_on_off.led.Belt;
+package com.led_on_off.led.belt;
 
 import android.annotation.TargetApi;
 import android.os.Build;
