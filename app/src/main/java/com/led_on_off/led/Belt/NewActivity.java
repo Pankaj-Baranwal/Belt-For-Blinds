@@ -1,5 +1,6 @@
 package com.led_on_off.led.Belt;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -8,6 +9,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +23,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -28,6 +33,7 @@ import java.util.UUID;
 
 public class NewActivity extends Activity {
     private static final String TAG = "bluetooth2";
+    String text = "Hello_World";
 
     Button btnOn, btnOff;
     TextView txtArduino;
@@ -46,16 +52,26 @@ public class NewActivity extends Activity {
     // MAC-address of Bluetooth module (you must edit this line)
     private static String address = "00:15:FF:F2:19:5F";
 
+    private TextToSpeech tts;
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new);
 
         btnOn = (Button) findViewById(R.id.btnOn);                  // button LED ON
         btnOff = (Button) findViewById(R.id.btnOff);                // button LED OFF
-        txtArduino = (TextView) findViewById(R.id.txtArduino);      // for display the received data from the Arduino
+        txtArduino = (TextView) findViewById(R.id.data);      // for display the received data from the Arduino
+        txtArduino.setMovementMethod(new ScrollingMovementMethod());
+
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+            }
+        });
+        tts.setLanguage(Locale.US);
 
         h = new Handler() {
             public void handleMessage(android.os.Message msg) {
@@ -68,9 +84,15 @@ public class NewActivity extends Activity {
                         if (endOfLineIndex > 0) {                                            // if end-of-line,
                             String sbprint = sb.substring(0, endOfLineIndex);               // extract string
                             sb.delete(0, sb.length());                                      // and clear
+                            text = "The object is " + sbprint + " centimeters away";
                             txtArduino.setText("Data from Arduino: " + sbprint);            // update TextView
                             btnOff.setEnabled(true);
                             btnOn.setEnabled(true);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                ttsGreater21(text);
+                            } else {
+                                ttsUnder20(text);
+                            }
                         }
                         //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
                         break;
@@ -233,5 +255,18 @@ public class NewActivity extends Activity {
                 Log.d(TAG, "...Error data send: " + e.getMessage() + "...");
             }
         }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void ttsUnder20(String text) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, map);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void ttsGreater21(String text) {
+        String utteranceId=this.hashCode() + "";
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
     }
 }
