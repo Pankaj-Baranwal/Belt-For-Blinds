@@ -2,12 +2,15 @@ package com.led_on_off.led;
 
 import android.bluetooth.BluetoothAdapter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.led_on_off.led.Belt.Bluetooth;
 
 /**
  * Created by pankaj on 14/1/17.
